@@ -1,4 +1,4 @@
-﻿namespace InvoicesWebApp.Domain.Entites
+﻿namespace InvoicesWebApp.Domain.Entities
 {
     public class Product
     {
