@@ -8,8 +8,9 @@
         public string Name { get; set; }
         public string Description { get; set; }
         public decimal UnitPrice { get; set; }
+        public VatRate VatRate { get; set; }
+        public int VatRateId { get; set; }
 
-        public decimal VatRate { get; set; }
-        public int QuantityInStock { get; set; }
+        public List<InvoiceItem> InvoiceItems { get; set; } = new List<InvoiceItem>();
     }
 }
