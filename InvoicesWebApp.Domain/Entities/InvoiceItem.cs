@@ -6,10 +6,11 @@
         public int Quantity { get; set; }
         public decimal UnitPrice { get; set; }
         public decimal VatAmount { get; set; }
+        public VatRate VatRate { get; set; }
+        public int VatRateThreshold { get; set; }
         public decimal TotalPrice { get; set; }
-
-        //rel
         public Invoice Invoice { get; set; }
+        public int InvoiceId { get; set; }
         public Product Product { get; set; }
 
     }

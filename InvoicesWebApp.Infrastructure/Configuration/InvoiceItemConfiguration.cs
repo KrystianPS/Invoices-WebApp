@@ -13,7 +13,10 @@ namespace InvoicesWebApp.Infrastructure.Configuration
             eb.Property(i => i.TotalPrice).HasColumnType("decimal(18,2)").HasPrecision(18, 2);
 
             eb.HasOne(ii => ii.Invoice)
-                .WithMany(i => i.InvoiceItems);
+                .WithMany(i => i.InvoiceItems)
+                .HasForeignKey(i => i.InvoiceId)
+            eb.HasOne(ii => ii.Product)
+                .WithMany(p => p.InvoiceItems);
         }
     }
 }
