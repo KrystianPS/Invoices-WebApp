@@ -2,10 +2,16 @@
 using Microsoft.EntityFrameworkCore;
 
 
+
 namespace InvoicesWebApp.Infrastructure.Persistance
 {
     public class InvoicesWebAppDbContext : DbContext
     {
+
+        public InvoicesWebAppDbContext(DbContextOptions<InvoicesWebAppDbContext> options) : base(options)
+        {
+
+        }
         public DbSet<User> Users { get; set; }
         public DbSet<UserCompanyDetails> UserCompanyDetails { get; set; }
         public DbSet<Contractor> Contractors { get; set; }
