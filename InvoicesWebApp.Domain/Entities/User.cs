@@ -4,7 +4,7 @@
     {
         public int Id { get; set; }
         public UserCompanyDetails UserCompany { get; set; } //rel
-        public int UserCompanyId { get; set; }
+        public int? UserCompanyId { get; set; }
 
         public string FullName { get; set; }
         public string Email { get; set; }
