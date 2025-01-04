@@ -1,4 +1,5 @@
 ﻿using InvoicesWebApp.Infrastructure.Persistance;
+using InvoicesWebApp.Infrastructure.Seeders;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -11,6 +12,8 @@ namespace InvoicesWebApp.Infrastructure.Extensions
         {
             services.AddDbContext<InvoicesWebAppDbContext>(options => options.UseSqlServer(
                 configuration.GetConnectionString("LocalDBDevelopmentConnectionString")));
+
+            services.AddScoped<DatabaseSeeder>();
         }
     }
 }
